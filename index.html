@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang=“en” xmlns="http://www.w3.org/2000/svg">
+<head>
+    <meta charset=“UTF-8">
+    <title>svg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+
+        <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop stop-color="#CCC" offset="0%"></stop>
+            <stop stop-color="#666" offset="50%"></stop>
+            <stop stop-color="#CCC" offset="100%"></stop>
+        </linearGradient>
+
+        <radialGradient id="radial" cx="100%" cy="100%" fx="100%" fy="100%" r="100%" gradientTransform="scale(1.3), rotate(-2)">
+            <stop stop-color="#000" offset="0%"></stop>
+            <stop stop-color="#000" offset="99%"></stop>
+            <stop stop-color="#3B3B3B" offset="99.1%"></stop>
+        </radialGradient>
+
+        <radialGradient id="radialBall" cx="70%" cy="70%" r="30%">
+            <stop stop-color="#3B3B3B" offset="0%"></stop>
+            <stop stop-color="#000" offset="100%"></stop>
+        </radialGradient>
+
+        <pattern id="patternBall" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+            <g fill="url(#radialBall)" fill-opacity="0.7" fill-rule="evenodd">
+                <circle cx="8" cy="8" r="8"></circle>
+                <circle cx="24" cy="24" r="8"></circle>
+            </g>
+        </pattern>
+
+    </defs>
+        <rect id="block"   stroke="#000" stroke-width="1" x="1"   y="1"   width="598" height="598" rx="10"></rect>
+        <rect id="pattern" stroke="#000" stroke-width="1" x="60"  y="60"  width="480" height="480" rx="10" fill="url(#patternBall)"></rect>
+        <rect id="lcd"     stroke="#000" stroke-width="1" x="130" y="150" width="340" height="240" rx="0"></rect>
+        <path id="monitor" stroke="#000" stroke-width="1" d="M141,437 L141,459 L459,459 L459,437 L353,437 L353,409
+                                                             C484,409 489,404 489,398 L489,142 C489,136 484,131 478,131
+                                                             L122,131 C116,131 111,136 111,142 L111,398 C111,404 116,409
+                                                             122,409 L247,409 L247,437 L141,437 Z"></path>
+
+
+    <use fill="url(#linear)" fill-rule="evenodd" xlink:href="#block"></use>
+    <use fill="url(#linear)" fill-rule="evenodd" xlink:href="#pattern"></use>
+    <use fill="url(#linear)" fill-rule="evenodd" xlink:href="#monitor"></use>
+    <use fill="url(#radial)" fill-rule="evenodd" xlink:href="#lcd"></use>
+
+
+    <path id="textPath" stroke="none" fill="none" d="M220,250 C250,250 270,250 320,300 C350,330 380,330 420,320"></path>
+          <text id="textAcademy" x="10" y="150" fill="white">
+              <textPath xlink:href="#textPath">IT-Academy</textPath>
+          </text>
+    <text id="textHomework" stroke="#000" fill="url(#linear)" stroke-width="1" x="62" y="42">Homework</text>
+</svg>
+
+</body>
+</html>
+

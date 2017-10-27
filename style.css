@@ -1,0 +1,11 @@
+#textAcademy {
+    font-family: "Arial" , sans-serif;
+    font-size: 30px;
+    color: white;
+}
+#textHomework {
+    font-family: "Arial" , sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
